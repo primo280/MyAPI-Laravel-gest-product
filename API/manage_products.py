@@ -17,7 +17,7 @@ def print_response(method, response):
 
 # Récupérer le jeton CSRF
 def get_csrf_token():
-    csrf_response = requests.get("http://127.0.0.1:8000/sanctum/csrf-cookie")
+    csrf_response = requests.get("http://127.0.0.1:8000/products/csrf-cookie")
     if csrf_response.status_code == 200:
         return csrf_response.cookies['XSRF-TOKEN']
     else:
